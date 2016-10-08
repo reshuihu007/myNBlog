@@ -1,0 +1,30 @@
+{
+  "name": "myNBlog",
+  "version": "1.0.0",
+  "description": "node博客",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reshuihu007/myNBlog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reshuihu007/myNBlog/issues"
+  },
+  "homepage": "https://github.com/reshuihu007/myNBlog#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "connect-mongo": "^1.3.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.1",
+    "mongoose": "^4.6.2",
+    "multer": "^1.2.0"
+  }
+}

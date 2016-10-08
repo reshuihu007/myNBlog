@@ -1,0 +1,21 @@
+<%- include include/header.html%>
+<div class="container">
+    <% articles.forEach(function(article){%>
+    <div class="media">
+        <a class="media-left" href="#">
+            <img class="img-rounded" style="width: 30px;height: 30px;" src="<%=article.user.avatar%>" alt="<%=article.user%>">
+        </a>
+        <div class="media-body">
+            <h4 class="media-heading">
+                <a href="/article/detail/<%=article._id%>"><%=article.title%></a>
+            </h4>
+            <p><%-article.content.length>50?article.content.slice(0,50)+'......':article.content%></p>
+            <p>作者:<%=article.user.username%>|发表时间:<%=article.createAt.toLocaleString()%></p>
+        </div>
+    </div>
+    <%});
+    %>
+
+</div>
+
+<%- include include/footer.html%>

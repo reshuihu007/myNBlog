@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%=title%></title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css">
+</head>
+<body>
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-div">
+                <span class="sr-only">切换</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">珠峰博客</a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-div">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">首页</a></li>
+                <% if(user){%>
+                <li ><a href="../article/add">发表文章</a></li>
+                <%}else{%>
+                <li ><a href="../user/signup">注册</a></li>
+                <li ><a href="../user/signin">登录</a></li>
+                <%}%>
+            </ul>
+            <% if(user){%>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img class="img-rounded" src="<%=user.avatar%>" style="width:30px;height:30px" alt="<%=user.username%>">
+                        <%=user.username%> <span
+                            class="caret"></span></a>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/user/signout">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <%}%>
+        </div>
+    </div>
+</nav>
